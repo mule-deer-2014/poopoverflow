@@ -2,8 +2,8 @@
 <h3><%= @question.body %></h3>
 <ul>
   <% @question.comments.each do |c| %>
-    <li><%= c.body %></li>
-    <p><%= c.vote_count %></p>
+    <li>Body Comment: <%= c.body %></li>
+    <p>Comment vote count: <%= c.vote_count %></p>
   <% end %>
 </ul>
 
