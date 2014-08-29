@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20140829202157) do
   create_table "answers", force: true do |t|
     t.string  "title"
     t.string  "body"
-    t.integer "vote_count"
+    t.integer "vote_count",  default: 0
     t.integer "question_id"
   end
 
   create_table "comments", force: true do |t|
     t.string  "body"
-    t.integer "vote_count"
+    t.integer "vote_count",  default: 0
     t.integer "question_id"
     t.integer "answer_id"
   end
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140829202157) do
   create_table "questions", force: true do |t|
     t.string  "title"
     t.string  "body"
-    t.integer "vote_count"
+    t.integer "vote_count", default: 0
   end
 
 end
