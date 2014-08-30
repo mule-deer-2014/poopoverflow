@@ -3,18 +3,16 @@
 <ul>
   <% @question.comments.each do |c| %>
     <li>Body Comment: <%= c.body %></li>
-    <p>Comment vote count: <%= c.vote_count %></p>
   <% end %>
 </ul>
 
 <ul>
-  <% @question.answers.order(vote_count: :desc).each do |a| %>
+  <% @question.answers.each do |a| %>
     <li>Answer: <%= a.body %></li>
-    <p>Vote Count: <%= a.vote_count %></p>
+    
     <ul>
-      <% a.comments.order(vote_count: :desc).each do |c| %>
+      <% a.comments.each do |c| %>
         <li>Comment Body: <%= c.body %></li>
-        <p>Vote Count: <%= c.vote_count %></p>
       <% end %>
     </ul>
   <% end %>
