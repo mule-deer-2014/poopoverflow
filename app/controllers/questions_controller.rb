@@ -15,8 +15,6 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     respond_to do |format|
       if @question.save
-        # format.json { render json: {question: @question}, status: :created, location: @question }
-        # format.json { render json: {html: render partial 'new_question', locals: {question: @question} }}
         format.html {render '_new_question', locals: {question: @question}, layout: false }
       else
         render :new
