@@ -1,5 +1,6 @@
 <h1>Questions</h1>
-<ul>
+<%= render 'new', locals: {question: @question} %>
+<ul class="questions-list">
   <% @questions.each do |q| %>
     <li><%= link_to q.title, question_path(q) %></li>
     <p>Vote Count: <%= q.vote_count %></p>
