@@ -1,0 +1,14 @@
+<h1>Create a new question</h1>
+<ul>
+  <%= form_for :question, url: {action: "create"}, remote: true do |f| %>
+  <li>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </li>
+  <li>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </li>
+  <%= f.submit :Create! %>
+  <% end %>
+</ul>
