@@ -1,0 +1,4 @@
+<li><%= link_to q.title, question_path(q) %></li>
+    <p>Vote Count: <%= q.vote_count %></p>
+    <p>Number of answers: <%= q.answers.count %></p>
+    <p>Number of comments: <%= q.comments.count %></p>
