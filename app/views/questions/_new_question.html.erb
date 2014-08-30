@@ -1,0 +1,4 @@
+<li><%= link_to question.title, "/question/#{question.id}" %></li>
+<p>Vote Count: <%= question.vote_count %></p>
+<p>Number of answers: <%= question.answers.count %></p>
+<p>Number of comments: <%= question.comments.count %></p>
