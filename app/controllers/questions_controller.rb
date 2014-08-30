@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(params[:question])
+    @question = Question.new(questions_params)
 
     if @question.save
       redirect_to root_path
@@ -29,4 +29,11 @@ class QuestionsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def questions_params
+    params.require(:question).permit(:title, :body, :user_id, :best_answer_id)
+  end
 end
+
