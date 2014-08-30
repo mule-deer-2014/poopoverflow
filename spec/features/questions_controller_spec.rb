@@ -1,21 +1,17 @@
-feature 'Users input something for grandma to respond to' do
-  scenario 'the homepage prompts for input' do
-    first_hit
-    expect(page).to have_content("What do you have to say?")
+feature 'Users can see the responses and comments of a question' do
+  scenario 'the user goes to the homepage to see all questions' do
+    go_home
+    expect(page).to have_content(#question#)
   end
 
-  scenario 'the user does not enter anything' do
-    enter_phrase(nil)
-    expect(page).to have_content("Say something silly!")
+  scenario 'the user clicks on a question' do
+    click_on_question
+    expect(page).to have_content(#question, answer, comments)
   end
+end
 
-  scenario 'user enters a lowercase string' do
-    enter_phrase('hello')
-    expect(page).to have_content('Speak up, kiddo!')
-  end
-
-  scenario 'user enters an uppercase string' do
-    enter_phrase('HELLO')
-    expect(page).to have_content('STOP YELLING AT ME AND RESPECT YOUR ELEDERS!')
-  end
+feature 'Users can post a question' do
+  scenario 'the user posts a question' do
+    post_question
+    expect(page).to #add the new question to the homepage
 end
