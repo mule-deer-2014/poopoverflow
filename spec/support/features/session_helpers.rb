@@ -1,6 +1,6 @@
 module Features
   module SessionHelpers
-    def first_hit
+    def go_home
       visit root_path
     end
 

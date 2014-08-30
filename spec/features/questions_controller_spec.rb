@@ -1,12 +1,8 @@
 feature 'Users can see the responses and comments of a question' do
-  scenario 'the user goes to the homepage to see all questions' do
+  scenario 'the user can click on a question' do
     go_home
-    expect(page).to have_content(#question#)
-  end
-
-  scenario 'the user clicks on a question' do
     click_on_question
-    expect(page).to have_content(#question, answer, comments)
+    find_link('Hello').visible?
   end
 end
 
