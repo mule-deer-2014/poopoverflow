@@ -20,6 +20,7 @@ html{
 }
 
 body{
+  position: relative;
   background-color: #DBBB84;
   width: 80%;
   margin: auto;
@@ -91,5 +92,4 @@ h3{
 
 .container_bottom_padding{
   padding-bottom: 100px;
-  margin-bottom: 100px;
 }
