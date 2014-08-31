@@ -40,8 +40,12 @@ h3{
 
 hr {
     border: none;
-    height: 5px;
+    height: 2px;
     background-color: #4C412E;
+}
+
+li{
+  list-style-type: none;
 }
 
 .btn{
@@ -100,6 +104,12 @@ hr {
 
 .btn-group a:hover{
   color: #BA9F70;
+}
+
+.block_tan{
+  background-color: #DBBB84;
+  margin: 5px;
+  padding: 5px;
 }
 
 .container_bottom_padding{
