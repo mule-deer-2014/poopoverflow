@@ -1,4 +1,6 @@
 <h1><%= @question.title %></h1>
+<div><%= link_to "Home", root_path %></div>
+<div><%= link_to "Edit", edit_question_path(@question) %></div>
 <h3><%= @question.body %></h3>
 <ul>
   <% @question.comments.each do |c| %>
