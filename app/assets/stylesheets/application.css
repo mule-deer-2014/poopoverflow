@@ -14,10 +14,16 @@
  *= require_self
  */
 
+html{
+  background-color: #7F6D4D;
+  min-height: 100%
+}
+
 body{
   background-color: #DBBB84;
   width: 80%;
   margin: auto;
+  min-height: 100%;
 }
 
 a{
@@ -33,8 +39,10 @@ h3{
 .btn{
   margin-left: 20px;
 }
+
 #title{
   font-family: 'Cherry Cream Soda', cursive;
+  color: #4C412E;
   letter-spacing: .3em;
   text-align: center;
   margin-top: 40px;
@@ -42,22 +50,46 @@ h3{
   margin-left: 60px;
 }
 
-/*.navbar-fixed-bottom{
-  background-color: brown;
-}*/
-
 .navbar-right{
   font-size: 30px;
 }
 
 .list-group-item{
   border:5px solid #DBBB84;
-
-  /*background-color: #E8530C;*/
 }
 
 .badge{
-  background-color: #51331B;
-  color:#DBBB84;
-  padding:5px;
+  background-color: #4C412E;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.jumbotron{
+  padding-bottom: 10px;
+}
+
+.btn-poop{
+  background-color: #4C412E;
+}
+
+.bg-poop{
+  background-color: #4C412E;
+  color: #fff;
+}
+
+.btn-group a{
+  color: #fff;
+  border: 1px solid black;
+}
+
+.btn-group a:hover{
+  color: #BA9F70;
+}
+
+.container_bottom_padding{
+  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
