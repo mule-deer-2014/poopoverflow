@@ -1,21 +1,22 @@
-<h1><%= @question.title %></h1>
-<div><%= link_to "Home", root_path %></div>
-<div><%= link_to "Edit", edit_question_path(@question) %></div>
-<h3><%= @question.body %></h3>
-<ul>
-  <% @question.comments.each do |c| %>
-    <li>Question Comment: <%= c.body %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1><%= @question.title %> <%= link_to "Edit", edit_question_path(@question),class:"btn btn-lg btn-success" %>
+</h1>
+    <h3><%= @question.body %></h3>
+  <ul>
+    <% @question.comments.each do |c| %>
+      <li>Question Comment: <%= c.body %></li>
+    <% end %>
+  </ul>
 
-<ul>
-  <% @question.answers.each do |a| %>
-    <li>Answer: <%= a.body %></li>
+  <ul>
+    <% @question.answers.each do |a| %>
+      <li>Answer: <%= a.body %></li>
 
-    <ul>
-      <% a.comments.each do |c| %>
-        <li>Answer Comment: <%= c.body %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</ul>
+      <ul>
+        <% a.comments.each do |c| %>
+          <li>Answer Comment: <%= c.body %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </ul>
+</div>

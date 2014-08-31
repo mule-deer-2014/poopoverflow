@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Poopoverflow</title>
+  <!-- Bootstrap CDN Links -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <title>Poop Overflow</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<br><br>
+<div class="container">
+  <div class="jumbotron alert-warning">
+    <h1><span><%= image_tag("poop.png", size: "100x100") %></span><span id="title">POOP OVERFLOW</span></h1>
+  </div>
+</div>
 
 <%= yield %>
+<nav class="navbar navbar-default navbar-fixed-bottom alert-warning" role="navigation">
+  <div class="container">
+  <div class="navbar-header">
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path%></li>
+        <li><%= link_to "Ask Question!", new_question_path%></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <a class="btn btn-social-icon btn-twitter">
+           <i class="fa fa-twitter"></i>
+         </a>
+         <a class="btn btn-social-icon btn-facebook">
+           <i class="fa fa-facebook"></i>
+         </a>
+         <a class="btn btn-social-icon btn-google-plus">
+           <i class="fa fa-google-plus"></i>
+         </a>
+      </ul>
+  </div>
+</nav>
 
 </body>
 </html>
