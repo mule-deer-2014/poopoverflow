@@ -20,6 +20,19 @@ body{
   margin: auto;
 }
 
+a{
+  font-size:18px;
+  color:#298249;
+}
+
+h3{
+  font-size: 40px;
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+.btn{
+  margin-left: 20px;
+}
 #title{
   font-family: 'Cherry Cream Soda', cursive;
   letter-spacing: .3em;
@@ -27,4 +40,24 @@ body{
   margin-top: 40px;
   font-size: .8em;
   margin-left: 60px;
+}
+
+/*.navbar-fixed-bottom{
+  background-color: brown;
+}*/
+
+.navbar-right{
+  font-size: 30px;
+}
+
+.list-group-item{
+  border:5px solid #DBBB84;
+
+  /*background-color: #E8530C;*/
+}
+
+.badge{
+  background-color: #51331B;
+  color:#DBBB84;
+  padding:5px;
 }

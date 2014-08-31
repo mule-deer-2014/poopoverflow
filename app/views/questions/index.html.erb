@@ -1,9 +1,11 @@
-<h3>Questions</h3>
-<%= link_to 'Create New Question', new_question_path %>
-<ul>
-  <% @questions.each do |q| %>
-    <li><%= link_to q.title, question_path(q) %></li>
-    <p>Number of answers: <%= q.answers.count %></p>
-    <p>Number of comments: <%= q.comments.count %></p>
-  <% end %>
-</ul>
+<div class = "container">
+  <h3>Questions <%= link_to 'Create New Question', new_question_path, class:"btn btn-lg btn-success" %></h3>
+  <ul class="list-group">
+    <% @questions.each do |q| %>
+      <li class = "list-group-item alert-warning"><%= link_to q.title, question_path(q) %>
+        <span class="badge">Answers: <%= q.answers.count %></span>
+        <span class="badge">Comments: <%= q.comments.count %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
