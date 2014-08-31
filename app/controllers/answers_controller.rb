@@ -6,15 +6,24 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(answers_params)
-
-    # if @answer.save
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
+    p params
+    @answer = Answer.new(answer_params)
+    question_answer = Question.find(params[:question_id])
+    if @answer.save
+      question_answer.answers<<@answer
+      redirect_to question_path(question_answer)
+    else
+      render :new
+    end
   end
 
   def destroy
+    @answer = Answer.find()
+  end
+
+  private
+
+  def answer_params
+    params.require(:answer).permit(:body, :question_id, :user_id)
   end
 end
