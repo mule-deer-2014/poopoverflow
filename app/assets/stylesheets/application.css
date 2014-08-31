@@ -16,7 +16,7 @@
 
 html{
   background-color: #7F6D4D;
-  min-height: 100%
+  height: 100%
 }
 
 body{
@@ -25,6 +25,7 @@ body{
   width: 80%;
   margin: auto;
   min-height: 100%;
+  color: #4C412E;
 }
 
 a{
@@ -35,6 +36,12 @@ a{
 h3{
   font-size: 40px;
   font-family: 'Cherry Cream Soda', cursive;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #4C412E;
 }
 
 .btn{
@@ -55,6 +62,10 @@ h3{
   font-size: 30px;
 }
 
+.navbar-link{
+  color: black;
+}
+
 .list-group-item{
   border:5px solid #DBBB84;
 }
@@ -70,6 +81,7 @@ h3{
 
 .jumbotron{
   padding-bottom: 10px;
+  color: #4C412E;
 }
 
 .btn-poop{
