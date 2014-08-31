@@ -3,6 +3,7 @@
 <head>
   <!-- Bootstrap CDN Links -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -13,6 +14,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<br><br>
+<div class="container">
+  <div class="jumbotron alert-warning">
+    <h1><span><%= image_tag("poop.png", size: "100x100") %></span><span id="title">POOP OVERFLOW</span></h1>
+  </div>
+</div>
 
 <%= yield %>
 
