@@ -5,9 +5,11 @@
   <% @questions.each do |q| %>
     <li>
       <p>Vote count: <%= q.votes.length %></p>
+      <p>Score: <%= q.score %></p>
       <p>
         <%= button_to 'up', { :method => :post, :controller => "votes", :action => "create", :remote => true, :data => { vote_for_id: q.id, vote_for_type: q.class.to_s.downcase, vote_value: 1 }} %>
-        <%= button_to 'down', { :method => :post, :controller => "votes", :action => "create", :remote => true, :data => { vote_for_id: q.id, vote_for_type: q.class.to_s.downcase, vote_value: 1 }} %>
+        <%= button_to 'down', { :method => :post, :controller => "votes", :action => "create", :remote => true, :data => { vote_for_id: q.id, vote_for_type: q.class.to_s.downcase, vote_value: -1 }} %>
+      </p>
 
 
       <p><%= link_to q.title, question_path(q) %></p>
