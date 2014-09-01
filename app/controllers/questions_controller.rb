@@ -5,10 +5,12 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    # respond_to do |format|
-    #   format.html
-    #   format.js {render :layout => false}
-    # end
+    respond_to do |format|
+      format.html
+      format.json do
+        render :layout => false
+      end
+    end
 
   end
 
