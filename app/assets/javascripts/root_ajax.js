@@ -11,10 +11,8 @@ var AjaxDisplayAnswers = function(event){
     url: path,
     type: 'GET'
   }).done(function(data) {
-    $(clicked_event).append(data)
+    $(clicked_event).append(data),
+    $(clicked_event).off('click')
   }).fail(function() {
     console.log("error");
-  }).always(function() {
-    $(clicked_event).off('click')
-  })
 }
