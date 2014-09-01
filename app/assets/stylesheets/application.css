@@ -38,10 +38,16 @@ h3{
   font-family: 'Cherry Cream Soda', cursive;
 }
 
+h5{
+  margin: 0;
+  padding-top: 10px;
+}
+
 hr {
     border: none;
     height: 2px;
     background-color: #4C412E;
+    margin-top: 0;
 }
 
 li{
@@ -109,6 +115,12 @@ li{
 
 .block_tan{
   background-color: #DBBB84;
+  margin: 5px;
+  padding: 5px;
+}
+
+.block_green{
+  background-color: #E7F0BE;
   margin: 5px;
   padding: 5px;
 }
