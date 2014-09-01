@@ -1,9 +1,11 @@
-<%= form_for @question do |f|%>
-  <%= f.label :title%>
-  <%= f.text_field :title%>
-  <br>
-  <%= f.label :body%>
-  <%= f.text_field :body%>
-  <br>
-  <%= f.submit "Submit"%>
-<% end %>
+<div class="container">
+  <%= form_for @question do |f|%>
+    <%= f.label :title%>
+    <%= f.text_field :title%>
+    <br>
+    <%= f.label :body%>
+    <%= f.text_field :body%>
+    <br>
+    <%= f.submit "Submit"%>
+  <% end %>
+</div>
