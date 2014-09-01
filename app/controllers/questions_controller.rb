@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    render layout: false
   end
 
   def new
@@ -13,7 +14,6 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(questions_params)
-
     if @question.save
       redirect_to root_path
     else
