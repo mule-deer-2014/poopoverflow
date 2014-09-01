@@ -1,37 +1,32 @@
-<div class="container bg-poop">
-  <div class="jumbotron alert-warning">
-  <h2><%= @question.title %> <%= link_to "Edit", edit_question_path(@question), class:"btn btn-xs btn-success" %>
-  </h2>
-  <hr>
-  <p><%= @question.body %></p>
-  <hr>
-  <h4>Question Comments <%= link_to "New Comment", new_question_comment_path(@question), class:"btn btn-xs btn-success" %></h4>
-  <ul>
-    <% @question.comments.each do |c| %>
-      <li class="block_tan">
-        <%= c.body %>
-      </li>
-    <% end %>
-  </ul>
-  <hr>
-  <h4>Question Answers <%= link_to "New Answer", new_question_answer_path(@question), class:"btn btn-xs btn-success" %></h4>
-  <ul>
-    <% @question.answers.each do |a| %>
+<br><br>
+<p><%= @question.body %></p>
+<hr>
+<h4>Question Comments <%= link_to "New Comment", new_question_comment_path(@question), class:"btn btn-xs btn-success" %></h4>
+<ul>
+  <% @question.comments.each do |c| %>
+    <li class="block_tan">
+      <%= c.body %>
+    </li>
+  <% end %>
+</ul>
+<hr>
+<h4>Question Answers <%= link_to "New Answer", new_question_answer_path(@question), class:"btn btn-xs btn-success" %></h4>
+<ul>
+  <% @question.answers.each do |a| %>
 
-      <li class="block_tan">
-        <%= a.body %>
-        <%= form_tag(answer_path(a), method: "delete") do %>
-          <input type="hidden" value = "<%=@question.id%>" name = "question_id">
-          <%= submit_tag("Delete") %>
-        <% end %>
-      </li>
+    <li class="block_tan">
+      <%= a.body %>
+      <br>
+      <%= form_tag(answer_path(a), method: "delete") do %>
+        <input type="hidden" value = "<%=@question.id%>" name = "question_id">
+        <%= submit_tag("Delete", class:"btn btn-xs btn-danger") %>
+      <% end %>
+    </li>
 
-      <ul>
-        <% a.comments.each do |c| %>
-          <li><%= c.body %></li>
-        <% end %>
-      </ul>
-    <% end %>
-  </ul>
-  </div>
-</div>
+    <ul>
+      <% a.comments.each do |c| %>
+        <li><%= c.body %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</ul>
