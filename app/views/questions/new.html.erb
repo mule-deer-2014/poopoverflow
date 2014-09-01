@@ -1,11 +1,15 @@
 <div class="container bg-poop">
-  <%= form_for @question do |f|%>
-    <%= f.label :title%>
-    <%= f.text_field :title%>
-    <br>
-    <%= f.label :body%>
-    <%= f.text_field :body%>
-    <br>
-    <%= f.submit "Submit"%>
-  <% end %>
+  <div class="jumbotron alert-warning">
+  <h2>New Question</h2>
+  <hr>
+    <%= form_for @question do |f|%>
+      <%= f.label :title%>
+      <%= f.text_field :title%>
+      <br>
+      <%= f.label :body%>
+      <%= f.text_field :body%>
+      <br>
+      <%= f.submit "Submit"%>
+    <% end %>
+  </div>
 </div>
