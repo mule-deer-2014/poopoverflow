@@ -1,5 +1,5 @@
-<div class = "container">
-  <h3>Questions <%= link_to 'Create New Question', new_question_path, class:"btn btn-lg btn-success" %></h3>
+<div class = "container bg-poop container_bottom_padding">
+  <h3>Questions</h3>
   <ul class="list-group">
     <% @questions.each do |q| %>
       <li class = "list-group-item alert-warning"><%= link_to q.title, question_path(q), :remote => true %>
