@@ -11,17 +11,16 @@ class AnswersController < ApplicationController
     question_answer = Question.find(params[:question_id])
     if @answer.save
       question_answer.answers<<@answer
-      redirect_to question_path(question_answer)
+      redirect_to root_path
     else
       render :new
     end
   end
 
   def destroy
-    p params
     @answer = Answer.find(params[:id])
     @answer.destroy
-    redirect_to question_path(params[:question_id])
+    redirect_to root_path
   end
 
   private
