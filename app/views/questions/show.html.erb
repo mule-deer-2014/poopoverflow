@@ -10,11 +10,12 @@
 <hr>
 <h4>Question Answers <%= link_to "New Answer", new_question_answer_path(@question), class:"btn btn-xs btn-success" %></h4>
 <% @question.answers.each do |a| %>
-  <div class="block_tan">
+  <div id="<%=a.id%>" class="block_tan">
     <%= a.body %>
     <br>
-    <%= form_tag(answer_path(a), method: "delete") do %>
+    <%= form_tag(answer_path(a), method: "delete", remote: true) do %>
       <input type="hidden" value = "<%=@question.id%>" name = "question_id">
+      <input type="hidden" value = "<%=a.id%>" name = "a_id">
       <%= submit_tag("Delete", class:"btn btn-xs btn-danger") %>
       <%= link_to "New Comment", new_answer_comment_path(a), class:"btn btn-xs btn-success" %>
     <% end %>
