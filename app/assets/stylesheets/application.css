@@ -16,6 +16,7 @@
 
 html{
   background-color: #7F6D4D;
+  background-image: url('/assets/tile_poop.png');
   height: 100%
 }
 
@@ -26,6 +27,9 @@ body{
   margin: auto;
   min-height: 100%;
   color: #4C412E;
+  -webkit-box-shadow: -1px 10px 5px 11px rgba(0,0,0,0.35);
+  -moz-box-shadow: -1px 10px 5px 11px rgba(0,0,0,0.35);
+  box-shadow: -1px 10px 5px 11px rgba(0,0,0,0.35);
 }
 
 a{
@@ -102,6 +106,7 @@ li{
 .bg-poop{
   background-color: #4C412E;
   color: #fff;
+  padding-bottom: 20px;
 }
 
 .btn-group a{

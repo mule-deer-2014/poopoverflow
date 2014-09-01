@@ -1,8 +1,14 @@
-<h1><%=@question.title%></h1>
-<h3><%=@question.body%></h3>
-<%= form_for [@question, @answer] do |f|%>
-  <%= f.label "Answer"%>
-  <%= f.text_field :body%>
-  <br>
-  <%= f.submit "Submit"%>
-<% end %>
+<div class="container bg-poop">
+  <div class="jumbotron alert-warning">
+    <h2>New Answer for <%=@question.title%></h2>
+    <hr>
+    <%= form_for [@question, @answer] do |f|%>
+      <div class="form-group">
+        <%= f.label "Answer"%>
+        <%= f.text_area :body, class:"form-control" %>
+      </div>
+      <br>
+      <%= f.submit "Submit", class:"btn btn-md btn-success"%>
+    <% end %>
+  </div>
+</div>
