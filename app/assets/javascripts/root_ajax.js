@@ -1,12 +1,10 @@
 $(document).ready(function() {
-  $(".list-group-item").on("click", AjaxDisplayAnswers)
-
+    $(".list-group-item").on("click", AjaxDisplayAnswers)
 })
 
 var AjaxDisplayAnswers = function(event){
   event.preventDefault();
-  // var path = $(".list-group-item a").attr('href')
-  var clicked_event = $(event.target)
+  var clicked_event = $(event.target.parentElement)
   var path = $(event.target).attr('href')
   console.log(path)
   $.ajax({
@@ -16,13 +14,7 @@ var AjaxDisplayAnswers = function(event){
     $(clicked_event).append(data)
   }).fail(function() {
     console.log("error");
+  }).always(function() {
+    $(clicked_event).off('click')
   })
 }
-
-// ////VIEW////
-
-// var renderTemplate = function(answers){
-//   // console.log(answers)
-//   console.log(this)
-//   $(".list-group-item a").append(answers)
-// }
