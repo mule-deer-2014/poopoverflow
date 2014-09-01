@@ -10,7 +10,13 @@
 
   <ul>
     <% @question.answers.each do |a| %>
-      <li>Answer: <%= a.body %></li>
+      <li>Answer: 
+        <%= a.body %>
+          <%= form_tag(answer_path(a), method: "delete") do %>
+          <input type="hidden" value = "<%=@question.id%>" name = "question_id">
+          <%= submit_tag("Delete") %>
+        <% end %>
+      </li>
       <ul>
         <% a.comments.each do |c| %>
           <li>Answer Comment: <%= c.body %></li>
