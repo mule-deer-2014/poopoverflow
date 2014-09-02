@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  var my_controller = new Controller()
+
+  my_controller.run()
+})
+

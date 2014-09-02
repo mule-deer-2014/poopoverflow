@@ -4,6 +4,6 @@ var View = function (){
 
 View.prototype = {
   updateViewResult: function(resultData){
-    this.questionResultView.empty().append(resultData);
+    this.questionResultView.empty().append(resultData)
   }
 }

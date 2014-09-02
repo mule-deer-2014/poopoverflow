@@ -3,12 +3,12 @@ var Controller = function(){
   this.parser = new Parser()
 }
 
-Controller.prototype{
+Controller.prototype = {
   run: function(){
-    //Bind Event Listners
+    $(document).on("keyup", this.keyPress.bind(this))
   },
 
-  keyPress: function(){
+  keyPress: function(e){
     results = this.parser.parseQuestion()
     this.view.updateViewResult(results)
   }

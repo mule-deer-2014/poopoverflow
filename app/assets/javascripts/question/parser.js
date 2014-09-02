@@ -4,12 +4,21 @@ var Parser = function(){
 
 Parser.prototype = {
   parseQuestion: function(){
-
+    var bodyValue = $(this.questionForm)[0][3].value
+    var bodyArray = bodyValue.split("")
+    // return bodyValue.replace(/\*/g, "<b>")
+    var counter = 0
+    for(var i = 0; i < bodyArray.length; i++){
+      if(bodyArray[i] == "*"){
+        if(counter % 2 == 0){
+          bodyArray[i] = "<b>"
+        }else{
+          bodyArray[i] = "</b>"
+        }
+        counter ++
+      }
+    }
+    console.log(bodyArray.join(""))
+    return bodyArray.join("")
   }
 }
-
-
-
-
-// "This is a string, *this should be bold*"
-// "This is a string, <b>this should be bold</b>"
