@@ -1,24 +1,25 @@
 var Parser = function(){
-  this.questionForm = $("#new_question")
 }
 
 Parser.prototype = {
-  parseQuestion: function(){
-    var bodyValue = $(this.questionForm)[0][3].value
-    var bodyArray = bodyValue.split("")
-    // return bodyValue.replace(/\*/g, "<b>")
+  parseCharacter: function(string){
+    var stringArray = string.split("")
+
     var counter = 0
-    for(var i = 0; i < bodyArray.length; i++){
-      if(bodyArray[i] == "*"){
+    for(var i = 0; i < stringArray.length; i++){
+      if(stringArray[i] === "*"){
         if(counter % 2 == 0){
-          bodyArray[i] = "<b>"
+          stringArray[i] = "<b>"
         }else{
-          bodyArray[i] = "</b>"
+          stringArray[i] = "</b>"
         }
         counter ++
       }
     }
-    console.log(bodyArray.join(""))
-    return bodyArray.join("")
+    return stringArray.join("")
+  },
+
+  parseText: function(string){
+    return this.parseCharacter(string)
   }
 }
